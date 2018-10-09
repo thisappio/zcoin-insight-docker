@@ -1,0 +1,13 @@
+version: '2'
+services:
+  zcoin-insight:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3881:3881"
+    volumes:
+      - .:/var/lib/insight
+    restart: always
+    
+
