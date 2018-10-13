@@ -30,7 +30,7 @@ RUN npm install -g https://github.com/zcoinofficial/bitcore-node-zcoin.git
 # create testnet insight
 RUN bitcore-node-zcoin create -t testnet \
     && cd testnet \
-    && bitcore-node-zcoin install git://github.com/thisappio/insight-api-zcoin.git \
+    && bitcore-node-zcoin install git://github.com/zcoinofficial/insight-api-zcoin.git \
     && bitcore-node-zcoin install git://github.com/zcoinofficial/insight-ui-zcoin.git \
     && tmpjson=$(mktemp) \
     && jq '.servicesConfig.bitcoind.spawn.exec = "/opt/zcoin/bin/zcoind"' bitcore-node-zcoin.json > "$tmpjson" \
