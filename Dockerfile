@@ -25,7 +25,7 @@ RUN mkdir -p /opt/zcoin \
 # install bitcore-node-zcoin
 RUN npm install -g https://github.com/zcoinofficial/bitcore-node-zcoin.git
 
-# ADD . /opt/insight
+ADD . /opt/insight
 
 # create testnet insight
 RUN bitcore-node-zcoin create -t testnet \
